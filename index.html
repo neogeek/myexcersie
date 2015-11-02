@@ -17,37 +17,41 @@
 
 </header>
 
-<div class="sets">
+<div class="sets"></div>
 
-    <h2>Set 1</h2>
-
+<script id="sets-template" type="text/x-handlebars-template">
+    {{#each sets}}
+    <h2>{{title}}</h2>
     <ul class="set">
-        <li><span class="number">10</span>Sit-ups</li>
-        <li><span class="number">10</span>Push-ups</li>
+        {{#each items}}
+        <li data-seconds="{{seconds}}">
+            <span class="number">{{number}}</span>
+            {{label}}
+            {{#if seconds}}
+            <span class="info">({{seconds}} seconds)</span>
+            {{/if}}
+        </li>
+        {{/each}}
     </ul>
+    {{/each}}
+</script>
 
-    <h2>Set 2</h2>
-
-    <ul class="set">
-        <li><span class="number">1</span>Wall sit <span class="info">(30 seconds)</span></li>
-        <li><span class="number">1</span>Plank <span class="info">(30 seconds)</span></li>
-    </ul>
-
-    <h2>Set 3</h2>
-
-    <ul class="set">
-        <li><span class="number">10</span>Squats</li>
-    </ul>
-
-</div>
-
+<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
 <script src="//code.jquery.com/jquery.min.js"></script>
 <script>
 
+var template = Handlebars.compile($('#sets-template').html());
+
+$.getJSON('/data/sets.json').done(function (data) {
+
+    $('.sets').html(template({ sets: data }));
+
+});
+
 FastClick.attach(document.body);
 
-$('.set li').on('click', function () {
+$('.sets').on('click', '.set li', function () {
 
     $(this).toggleClass('done');
 

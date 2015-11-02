@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Set 1",
+        "items": [
+            {
+                "label": "Sit-ups",
+                "number": 10,
+                "seconds": 0
+            },
+            {
+                "label": "Push-ups",
+                "number": 10,
+                "seconds": 0
+            }
+        ]
+    },
+    {
+        "title": "Set 2",
+        "items": [
+            {
+                "label": "Wall sit",
+                "number": 1,
+                "seconds": 30
+            },
+            {
+                "label": "Plank",
+                "number": 1,
+                "seconds": 30
+            }
+        ]
+    },
+    {
+        "title": "Set 3",
+        "items": [
+            {
+                "label": "Squat",
+                "number": 10,
+                "seconds": 0
+            }
+        ]
+    }
+]
