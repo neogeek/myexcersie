@@ -1,0 +1,2 @@
+deploy:
+	divshot push production

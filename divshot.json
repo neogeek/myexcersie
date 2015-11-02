@@ -1,0 +1,4 @@
+{
+    "name": "myexcersie",
+    "exclude": ["Makefile", "README.md"]
+}
