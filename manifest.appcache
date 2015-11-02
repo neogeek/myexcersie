@@ -1,9 +1,10 @@
 CACHE MANIFEST
 
-# Mon Nov 02 2015 18:16:01 GMT-0500 (EST)
+# Mon Nov 02 2015 18:19:09 GMT-0500 (EST)
 
 CACHE:
 index.html
+favicon.ico
 css/styles.css
 images/icon.png
 http://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js
