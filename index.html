@@ -97,7 +97,7 @@ $('.sets').on('click', '.set li', function () {
 
     var $this = $(this);
 
-    if (parseInt($this.data('seconds'), 10) > 0) {
+    if (parseInt($this.data('seconds'), 10) > 0 && !$this.hasClass('done')) {
 
         $this.addClass('active');
 
