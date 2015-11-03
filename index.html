@@ -77,7 +77,7 @@ function countdown() {
 
 function timer() {
 
-    if (timerValue <= 10) {
+    if (timerValue <= parseInt($('.sets .set .item.active').data('seconds'), 10)) {
 
         $('.set-timer-wrapper .number').text(timerValue++);
 
