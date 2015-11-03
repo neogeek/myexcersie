@@ -12,19 +12,21 @@
 <body>
 
 <header>
-
-    <h1>Commit to exercise</h1>
-
+    <h1><a href="/">Commit to exercise</a></h1>
 </header>
 
 <div class="sets"></div>
+
+<div class="set-timer-wrapper hidden">
+    <span class="number">3</span>
+</div>
 
 <script id="sets-template" type="text/x-handlebars-template">
     {{#each sets}}
     <h2>{{title}}</h2>
     <ul class="set">
         {{#each items}}
-        <li data-seconds="{{seconds}}">
+        <li class="item" data-seconds="{{seconds}}">
             <span class="number">{{number}}</span>
             {{label}}
             {{#if seconds}}
@@ -41,7 +43,11 @@
 <script src="//code.jquery.com/jquery.min.js"></script>
 <script>
 
-var template = Handlebars.compile($('#sets-template').html());
+var template = Handlebars.compile($('#sets-template').html()),
+    countdownValue = 3,
+    countdownInterval,
+    timerValue = 0,
+    timerInterval;
 
 $.getJSON('/data/sets.json').done(function (data) {
 
@@ -51,9 +57,61 @@ $.getJSON('/data/sets.json').done(function (data) {
 
 FastClick.attach(document.body);
 
+function countdown() {
+
+    if (countdownValue) {
+
+        $('.set-timer-wrapper .number').text(countdownValue--);
+
+    } else {
+
+        clearInterval(countdownInterval);
+
+        timerValue = 0;
+        timer();
+        timerInterval = setInterval(timer, 1000);
+
+    }
+
+}
+
+function timer() {
+
+    if (timerValue <= 10) {
+
+        $('.set-timer-wrapper .number').text(timerValue++);
+
+    } else {
+
+        clearInterval(timerInterval);
+
+        $('.sets .set .item.active').addClass('done').removeClass('active');
+
+        $('.set-timer-wrapper').addClass('hidden');
+
+    }
+
+}
+
 $('.sets').on('click', '.set li', function () {
 
-    $(this).toggleClass('done');
+    var $this = $(this);
+
+    if (parseInt($this.data('seconds'), 10) > 0) {
+
+        $this.addClass('active');
+
+        $('.set-timer-wrapper').removeClass('hidden');
+
+        countdownValue = 3;
+        countdown();
+        countdownInterval = setInterval(countdown, 1000);
+
+    } else {
+
+        $this.toggleClass('done');
+
+    }
 
 });
 
