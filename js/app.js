@@ -74,6 +74,14 @@
 
     });
 
+    $('.sets').on('click', '.btn-reset', function () {
+
+        $(window).scrollTop(0);
+
+        $('.sets .set .item.done').removeClass('done').removeClass('active');
+
+    });
+
     $('.set-timer-wrapper').on('click', function () {
 
         $(this).addClass('hidden');

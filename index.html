@@ -22,6 +22,7 @@
 </div>
 
 <script id="sets-template" type="text/x-handlebars-template">
+    <div class="notification">Run through this routine <b>twice</b>, pausing for rest when necessary.</div>
     {{#each sets}}
     <h2>{{title}}</h2>
     <ul class="set">
@@ -36,6 +37,7 @@
         {{/each}}
     </ul>
     {{/each}}
+    <button class="btn-reset">Reset Routine Progress</button>
 </script>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js"></script>
