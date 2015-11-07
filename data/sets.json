@@ -4,12 +4,12 @@
         "items": [
             {
                 "label": "Sit-ups",
-                "number": 10,
+                "number": 20,
                 "seconds": 0
             },
             {
                 "label": "Push-ups",
-                "number": 10,
+                "number": 20,
                 "seconds": 0
             }
         ]
@@ -20,12 +20,12 @@
             {
                 "label": "Wall sit",
                 "number": 1,
-                "seconds": 30
+                "seconds": 45
             },
             {
                 "label": "Plank",
                 "number": 1,
-                "seconds": 30
+                "seconds": 45
             }
         ]
     },
@@ -34,7 +34,12 @@
         "items": [
             {
                 "label": "Squat",
-                "number": 10,
+                "number": 20,
+                "seconds": 0
+            },
+            {
+                "label": "Lunges",
+                "number": 20,
                 "seconds": 0
             }
         ]
