@@ -44,9 +44,33 @@
 
             clearInterval(timerInterval);
 
-            $('.sets .set .item.active').addClass('done').removeClass('active');
+            setItemToDone($('.sets .set .item.active'));
 
             $('.set-timer-wrapper').addClass('hidden');
+
+        }
+
+    }
+
+    function setItemToDone ($item) {
+
+        if ($item.hasClass('active')) {
+
+            $item.addClass('done').removeClass('active');
+
+        } else {
+
+            $item.toggleClass('done');
+
+        }
+
+        if (!$('.sets .set .item:not(.done)').length) {
+
+            $('.sets .btn-reset').addClass('btn-active');
+
+        } else {
+
+            $('.sets .btn-reset').removeClass('btn-active');
 
         }
 
@@ -68,7 +92,7 @@
 
         } else {
 
-            $this.toggleClass('done');
+            setItemToDone($(this));
 
         }
 

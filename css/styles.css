@@ -122,6 +122,11 @@ header h1 a {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.btn-active {
+    color: #fff;
+    background-color: #61DB6F;
+}
+
 @media (min-width: 30em) {
 
     .set-timer-wrapper {
