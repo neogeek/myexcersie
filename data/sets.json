@@ -43,5 +43,15 @@
                 "seconds": 0
             }
         ]
+    },
+    {
+        "title": "Set 4",
+        "items": [
+            {
+                "label": "Bicep Curls",
+                "number": 30,
+                "seconds": 0
+            }
+        ]
     }
 ]
