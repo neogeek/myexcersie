@@ -1,0 +1,11 @@
+{
+  "firebase": "myexercise",
+  "public": "./",
+  "ignore": [
+    "firebase.json",
+    "Makefile",
+    "README.md",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
