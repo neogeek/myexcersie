@@ -4,12 +4,12 @@
         "items": [
             {
                 "label": "Sit-ups",
-                "number": 40,
+                "number": 20,
                 "seconds": 0
             },
             {
                 "label": "Push-ups",
-                "number": 30,
+                "number": 15,
                 "seconds": 0
             }
         ]
@@ -34,12 +34,12 @@
         "items": [
             {
                 "label": "Squat",
-                "number": 40,
+                "number": 20,
                 "seconds": 0
             },
             {
                 "label": "Lunges",
-                "number": 30,
+                "number": 15,
                 "seconds": 0
             }
         ]
@@ -49,7 +49,7 @@
         "items": [
             {
                 "label": "Bicep Curls",
-                "number": 40,
+                "number": 20,
                 "seconds": 0
             }
         ]
