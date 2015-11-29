@@ -9,7 +9,6 @@ css/styles.css
 data/sets.json
 images/icon.png
 js/app.js
-
 https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js
 https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js
 https://code.jquery.com/jquery.min.js
